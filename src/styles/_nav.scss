@@ -1,0 +1,55 @@
+@use 'breakpoints';
+@import 'colors';
+
+nav {
+  background-color: $primary-color;
+  margin-bottom: 1em;
+
+  a {
+    text-decoration: none;
+    color: $secondary-light-light-color;
+  }
+  a:hover {
+    color: lighten($secondary-light-light-color, 20%);
+  }
+}
+
+.nav-list-container {
+  // list-style: none;\
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  li {
+    display: inline;
+    padding-right: 1em;
+  }
+  li:last-child {
+    padding-right: 0;
+  }
+
+  .logo {
+    padding-left: 0;
+  }
+
+  .menu-list {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: $sm) {
+  .nav-list-container {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $md) {
+  .nav-list-container {
+    padding: 0;
+    padding-inline-start: 0;
+    width: $md;
+  }
+}
