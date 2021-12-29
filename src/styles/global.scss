@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@import './sizing-variables.scss';
 @import './nav.scss';
 
 // variables
@@ -6,13 +6,26 @@ $font-stack: Helvetica, sans-serif;
 
 // element overwrites
 body {
+  color: $primary-dark-color;
+  font: 100% $font-stack;
   margin: 0 !important;
   padding: 0 !important;
-  font: 100% $font-stack;
-  color: $primary-dark-color;
 }
 
-// Custom
+// Classes
+.root-container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $md) {
+  .root-container-flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// ID
 #main-container {
   // flexbox
   display: flex;
@@ -20,7 +33,7 @@ body {
 
   // other properties
   margin: auto;
-  padding: 0;
+  padding: $nav-height 0 0 0; //TODO make this a variable
   width: 100%;
 
   h1 {
@@ -28,16 +41,18 @@ body {
   }
 
   main {
-    padding: 0 1em;
+    padding: 1rem;
   }
 }
 
 @media (min-width: $md) {
   #main-container {
-    width: $md;
+    padding: 0 0 0 $nav-width;
+    // width: $md;
+    width: 100%;
 
     main {
-      padding: 0;
+      padding: 1rem;
     }
   }
 }

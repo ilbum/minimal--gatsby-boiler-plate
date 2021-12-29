@@ -3,7 +3,7 @@ import Navbar from './navbar';
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <>
+    <div className="root-container-flex">
       <title>{pageTitle}</title>
       <Navbar />
       <div id="main-container">
@@ -12,7 +12,7 @@ const Layout = ({ pageTitle, children }) => {
           {children}
         </main>
       </div>
-    </>
+    </div>
   );
 };
 
