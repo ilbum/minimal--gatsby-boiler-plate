@@ -3,12 +3,14 @@
 
 // Classes
 .nav-container-flex {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  height: $nav-height;
   position: fixed;
   width: 100%;
 
-  background-color: $primary-color;
+  background-color: $primary-dark-color;
   margin-bottom: 1rem;
 }
 
@@ -52,6 +54,9 @@ nav {
   li:last-child {
     padding-right: 0;
   }
+  ul {
+    margin: 0;
+  }
 
   .logo {
     padding-left: 1rem;
@@ -71,7 +76,8 @@ nav {
     width: $nav-width;
 
     .logo {
-      padding: 0.5rem 1rem;
+      margin: 1rem 0 1.5rem;
+      padding: 0 1rem;
       font-size: 1.2em;
     }
 
